@@ -65,7 +65,7 @@ def process_video(video_file, show_results, progress_bar, status_text):
 
     # Create model
     net = create_model(model='b0', num=len(LABELS), weights=False)
-    net.load_state_dict(torch.load('laoshu/mouse-main/runs/weights/best.pth', map_location=device), strict=False)
+    net.load_state_dict(torch.load('mouse-main/runs/weights/best.pth', map_location=device), strict=False)
     net.to(device)
     net.eval()
 
